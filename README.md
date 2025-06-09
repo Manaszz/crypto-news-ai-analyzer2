@@ -1,10 +1,10 @@
-# Crypto New AI Analyzer
+# Crypto News AI Analyzer
 
-AI-powered cryptocurrency analysis tool.
+AI-powered cryptocurrency news analysis tool.
 
 ## Description
 
-This project provides intelligent analysis capabilities for cryptocurrency markets using advanced AI technologies.
+This project provides intelligent analysis capabilities for cryptocurrency news and market data using advanced AI technologies.
 
 ## Getting Started
 
