@@ -1,0 +1,312 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Task List Management with Sub-Tasks (Enhanced v2.0 - Clean Version)
+
+Guidelines for creating and managing task lists with detailed sub-task files to track project progress comprehensively. 
+
+## Task List Structure v2.0
+
+### Main Task File Location
+Create a main task list file in the `TASKS/` directory:
+- Store in `TASKS/` directory (e.g., `TASKS/ASSISTANT_CHAT.md`)
+- Use descriptive name based on project/feature (e.g., `ASSISTANT_CHAT.md`, `USER_INTERFACE.md`, `API_IMPLEMENTATION.md`)
+- Include clear title and feature description
+- Maintain overview with links to detailed task files
+
+### Individual Task Files Location
+Create detailed files for each task in project-specific subdirectories:
+- Store in `TASKS/{MAIN_FILE_NAME}/` subdirectory
+- Example: For main file `TASKS/ASSISTANT_CHAT.md` → individual tasks in `TASKS/ASSISTANT_CHAT/`
+- Name format: `task0.md`, `task1.md`, `task2.md`, etc.
+- Contains comprehensive task details, sub-tasks, and progress tracking
+
+### Directory Structure
+```
+project_root/
+├── TASKS/
+│   ├── ASSISTANT_CHAT.md          # Main task file
+│   ├── ASSISTANT_CHAT/            # Individual task files directory
+│   │   ├── task0.md
+│   │   ├── task1.md
+│   │   ├── task2.md
+│   │   └── ...
+│   ├── USER_INTERFACE.md          # Another main task file
+│   ├── USER_INTERFACE/            # Another set of individual tasks
+│   │   ├── task0.md
+│   │   ├── task1.md
+│   │   └── ...
+│   └── API_IMPLEMENTATION.md      # Yet another main task file
+│       └── API_IMPLEMENTATION/    # Corresponding individual tasks
+│           ├── task0.md
+│           └── task1.md
+```
+
+## Main Task File Structure
+
+```
+
+
+# Feature Name Implementation
+
+Brief description of the feature and its purpose.
+
+## Completed Tasks
+
+- [x] **Task 0**: Brief description ([details](mdc:ASSISTANT_CHAT/task0.md)) ✅
+- [x] **Task 1**: Brief description ([details](mdc:ASSISTANT_CHAT/task1.md)) ✅
+
+
+## In Progress Tasks
+
+- [ ] **Task 2**: Brief description ([details](mdc:ASSISTANT_CHAT/task2.md)) 🔄
+- [ ] **Task 3**: Brief description ([details](mdc:ASSISTANT_CHAT/task3.md)) 🔄
+
+
+## Planned Tasks
+
+- [ ] **Task 4**: Brief description ([details](mdc:ASSISTANT_CHAT/task4.md)) 📋
+- [ ] **Task 5**: Brief description ([details](mdc:ASSISTANT_CHAT/task5.md)) 📋
+
+
+## Implementation Plan
+
+Overall architecture description and implementation approach.
+
+### Related Files
+
+- `src/main.ts` - Main application file ✅
+- `src/components/` - UI components 🔄
+- `src/utils/` - Utility functions 📋
+
+```
+
+## Individual Task File Structure
+
+Each `TASKS/{MAIN_FILE_NAME}/taskN.md` file should contain:
+
+```
+
+
+# Task N: Task Title
+
+**Status**: In Progress / Completed / Planned
+**Priority**: High / Medium / Low
+**Assignee**: @username
+**Created**: YYYY-MM-DD
+**Due Date**: YYYY-MM-DD
+**Dependencies**: Task X, Task Y
+
+## Description
+
+Detailed task description, requirements, and acceptance criteria.
+
+## Sub-tasks
+
+- [ ] Sub-task 1: Description
+    - [ ] Sub-task 1.1: Detailed sub-component
+    - [ ] Sub-task 1.2: Another sub-component
+- [ ] Sub-task 2: Description
+- [ ] Sub-task 3: Description
+
+
+## Technical Details
+
+### Files to Create/Modify
+
+- `path/to/file1.ts` - Purpose description
+- `path/to/file2.ts` - Purpose description
+
+
+### Architecture Decisions
+
+Technical solutions and their rationale.
+
+### Dependencies
+
+External libraries, APIs, or system dependencies.
+
+## Progress Tracking
+
+**Sub-tasks Completed**: 2/5 (40%)
+
+### Change History
+
+- `YYYY-MM-DD HH:MM` - Task created
+- `YYYY-MM-DD HH:MM` - Started sub-task 1
+- `YYYY-MM-DD HH:MM` - Completed sub-task 1
+
+
+## Notes
+
+Additional notes, discovered issues, useful links, and considerations.
+
+```
+
+## Task Management Guidelines
+
+### Project Initialization
+1. **Create directory structure**:
+   - Create `TASKS/` directory in project root
+   - Create main task file `TASKS/{PROJECT_NAME}.md`
+   - Create subdirectory `TASKS/{PROJECT_NAME}/` for individual tasks
+
+### Creating New Tasks
+1. **Directory structure verification**:
+   - Ensure `TASKS/` directory exists
+   - Verify main file exists in `TASKS/` directory
+   - Confirm subdirectory `TASKS/{MAIN_FILE_NAME}/` exists
+
+2. **Main file update**:
+   - Add brief entry in appropriate section (Planned/In Progress)
+   - Assign unique sequential ID (Task N)
+   - Include link to detailed file: `([details](mdc:{MAIN_FILE_NAME}/taskN.md))`
+   - Set initial status emoji
+
+3. **Create detailed file**:
+   - Create `TASKS/{MAIN_FILE_NAME}/taskN.md` with full template
+   - Fill in all metadata fields
+   - Break down into sub-tasks if complex
+   - Identify technical dependencies
+
+### Task Progression
+1. **Status transitions**:
+   - Planned → In Progress → Completed
+   - Update both main file and detailed file simultaneously
+   - Move tasks between sections in main file
+   - Update status field in detailed file
+
+2. **Sub-task management**:
+   - Mark sub-tasks complete as work progresses
+   - Update progress percentage
+   - Add change history entries
+   - Identify blocking issues or dependencies
+
+### File Synchronization
+- **Always update both files together**
+- Main file shows current status and overview
+- Detailed file contains comprehensive information
+- Maintain consistent task numbering
+- Keep cross-references accurate with proper path structure
+
+## AI Instructions
+
+When working with enhanced task lists, the AI should:
+
+### Project Setup
+1. **Initialize structure**: Create `TASKS/` directory and main task file
+2. **Verify paths**: Ensure proper directory structure exists
+3. **Create subdirectory**: Set up `TASKS/{MAIN_FILE_NAME}/` for individual tasks
+
+### Task Creation
+1. Check existing task numbers to assign next sequential ID
+2. Ensure proper directory structure: `TASKS/{MAIN_FILE_NAME}/`
+3. Create both main file entry and detailed task file in correct locations
+4. Use correct link format: `({MAIN_FILE_NAME}/taskN.md)`
+5. Fill in all required metadata fields
+6. Break complex tasks into manageable sub-tasks (max 8 hours each)
+7. Identify file dependencies and technical requirements
+
+### Progress Updates
+1. **Before starting work**: Check which task to implement next from main file in `TASKS/`
+2. **During work**: Update sub-task progress in detailed file in `TASKS/{MAIN_FILE_NAME}/`
+3. **After completion**: Update both main file status and detailed file
+4. **Cross-file consistency**: Ensure status synchronization between files
+
+### Task Decomposition
+1. Analyze task complexity and break into sub-tasks
+2. Create hierarchical sub-task structure when needed
+3. Estimate effort for each sub-task
+4. Identify dependencies between sub-tasks
+5. Document technical approach and architecture decisions
+
+### File Management
+1. Maintain accurate file lists in "Related Files" sections
+2. Update file status indicators (✅ 🔄 📋)
+3. Document purpose of each created/modified file
+4. Keep file paths current as project structure evolves
+5. **Directory structure**: Always use `TASKS/{MAIN_FILE_NAME}/` for individual tasks
+
+### Quality Assurance
+1. Verify task numbering consistency
+2. Check that all links between files work correctly
+3. Ensure all completed tasks are properly documented
+4. Validate that sub-task progress matches main task status
+5. **Path validation**: Confirm all task file references use correct `TASKS/{MAIN_FILE_NAME}/` format
+
+## Multi-Project Management
+
+### Organizing Multiple Features
+- Each major feature gets its own main task file
+- Example structure:
+  ```
+  TASKS/
+  ├── AUTHENTICATION.md      # Auth feature
+  ├── AUTHENTICATION/        # Auth tasks
+  ├── USER_INTERFACE.md      # UI feature
+  ├── USER_INTERFACE/        # UI tasks
+  ├── API_BACKEND.md         # Backend feature
+  └── API_BACKEND/           # Backend tasks
+  ```
+
+### Cross-Project Dependencies
+- Reference tasks from other projects: `Task depends on USER_INTERFACE/task3.md`
+- Maintain dependency tracking across features
+- Use consistent naming conventions
+
+## Status Indicators
+
+Use these emojis for visual status tracking:
+- ✅ Completed
+- 🔄 In Progress  
+- 📋 Planned
+- ⚠️ Blocked
+- 🔗 Dependent
+
+## Example Task Workflow
+
+### Creating New Task
+1. **Check structure**: Ensure `TASKS/ASSISTANT_CHAT.md` exists and `TASKS/ASSISTANT_CHAT/` directory exists
+2. Determine next task number (e.g., Task 7)
+3. Add to main file: `- [ ] **Task 7**: Implement user authentication ([details](mdc:ASSISTANT_CHAT/task7.md)) 📋`
+4. Create `TASKS/ASSISTANT_CHAT/task7.md` with full template
+5. Fill metadata and break into sub-tasks
+
+### Updating Progress
+1. Mark sub-task complete in detailed file (`TASKS/ASSISTANT_CHAT/task7.md`)
+2. Update progress percentage
+3. If all sub-tasks complete, update main file status (`TASKS/ASSISTANT_CHAT.md`)
+4. Move task to "Completed Tasks" section if finished
+5. Update status emoji and add completion timestamp
+
+### Complete Project Example
+```
+project_root/
+├── src/
+│   ├── components/
+│   ├── utils/
+│   └── main.ts
+├── TASKS/
+│   ├── CHAT_ASSISTANT.md           # Main overview
+│   ├── CHAT_ASSISTANT/             # Individual task details
+│   │   ├── task0.md               # Setup project structure
+│   │   ├── task1.md               # Implement core chat logic
+│   │   ├── task2.md               # Add message history
+│   │   ├── task3.md               # Implement UI components
+│   │   └── task4.md               # Add authentication
+│   └── README.md                   # Project documentation
+```
+
+## Benefits of v2.0 Structure
+
+1. **Better Organization**: Clear separation of features and tasks
+2. **Scalability**: Easy to add new features without cluttering
+3. **Navigation**: Intuitive directory structure
+4. **Maintenance**: Each feature self-contained
+5. **Collaboration**: Teams can work on different features independently
+6. **Documentation**: Clear hierarchy and relationships
+
+This clean v2.0 system provides optimal organization for complex projects with multiple features while maintaining comprehensive task tracking capabilities.
+
