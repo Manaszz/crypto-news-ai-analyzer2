@@ -1,6 +1,6 @@
 # Task 9: Documentation and Deployment
 
-**Status**: Planned  
+**Status**: In Progress  
 **Priority**: Low  
 **Assignee**: @developer  
 **Created**: 2025-01-26  
@@ -63,11 +63,12 @@ Create comprehensive documentation for the MCP server and prepare deployment con
 
 ## Progress Tracking
 
-**Sub-tasks Completed**: 0/4 (0%)
+**Sub-tasks Completed**: 1/4 (25%)
 
 ### Change History
 
 - `2025-01-26 00:00` - Task created
+- `2025-06-11 00:00` - Created a Dockerfile for containerization.
 
 ## Notes
 

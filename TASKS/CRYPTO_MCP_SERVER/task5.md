@@ -1,6 +1,6 @@
 # Task 5: MCP Tools Implementation
 
-**Status**: In Progress  
+**Status**: Completed  
 **Priority**: High  
 **Assignee**: @developer  
 **Created**: 2025-01-26  
@@ -71,6 +71,7 @@ Implement the MCP tools interface that exposes cryptocurrency news analytics fun
 
 - `2025-01-26 00:00` - Task created
 - `2025-06-10 00:00` - Implemented MCP tool definitions in `CryptoNewsTools.java`. Service logic is pending.
+- `2025-06-11 00:00` - Updated all MCP tools to correctly call the implemented service methods.
 
 ## Notes
 

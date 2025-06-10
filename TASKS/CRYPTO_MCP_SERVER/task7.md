@@ -1,6 +1,6 @@
 # Task 7: Error Handling and Validation
 
-**Status**: Planned  
+**Status**: In Progress  
 **Priority**: Medium  
 **Assignee**: @developer  
 **Created**: 2025-01-26  
@@ -60,11 +60,12 @@ Implement comprehensive error handling and input validation throughout the MCP s
 
 ## Progress Tracking
 
-**Sub-tasks Completed**: 0/4 (0%)
+**Sub-tasks Completed**: 1/4 (25%)
 
 ### Change History
 
 - `2025-01-26 00:00` - Task created
+- `2025-06-11 00:00` - Created a global exception handler.
 
 ## Notes
 

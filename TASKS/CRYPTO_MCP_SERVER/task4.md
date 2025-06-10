@@ -1,6 +1,6 @@
 # Task 4: Enhanced SSE Transport
 
-**Status**: Planned  
+**Status**: In Progress  
 **Priority**: Medium  
 **Assignee**: @developer  
 **Created**: 2025-01-26  
@@ -60,11 +60,12 @@ Enhance the existing Server-Sent Events (SSE) transport mechanism to work with t
 
 ## Progress Tracking
 
-**Sub-tasks Completed**: 0/4 (0%)
+**Sub-tasks Completed**: 1/4 (25%)
 
 ### Change History
 
 - `2025-01-26 00:00` - Task created
+- `2025-06-11 00:00` - Implemented `NewsUpdateService` for periodic news fetching.
 
 ## Notes
 

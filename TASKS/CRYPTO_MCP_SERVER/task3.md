@@ -1,6 +1,6 @@
 # Task 3: Enhanced HTTP Transport
 
-**Status**: Planned  
+**Status**: In Progress  
 **Priority**: Medium  
 **Assignee**: @developer  
 **Created**: 2025-01-26  
@@ -31,8 +31,8 @@ Enhance the existing HTTP transport mechanism to work with the new Perplexity AP
 - [ ] Add health check and monitoring endpoints
     - [ ] Implement health check endpoint
     - [ ] Add metrics endpoint for monitoring
-    - [ ] Create status endpoint showing API connectivity
-    - [ ] Add endpoint for API usage statistics
+    - [x] Create status endpoint showing API connectivity
+    - [x] Add endpoint for API usage statistics
 
 ## Technical Details
 
@@ -60,11 +60,12 @@ Enhance the existing HTTP transport mechanism to work with the new Perplexity AP
 
 ## Progress Tracking
 
-**Sub-tasks Completed**: 0/4 (0%)
+**Sub-tasks Completed**: 1/4 (25%)
 
 ### Change History
 
 - `2025-01-26 00:00` - Task created
+- `2025-06-11 00:00` - Added Spring Boot Actuator for health and metrics endpoints.
 
 ## Notes
 
