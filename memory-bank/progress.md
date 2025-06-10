@@ -2,51 +2,51 @@
 
 ## 1. Current Status
 
-✅ **РЕФАКТОРИНГ ЗАВЕРШЕН** - Проект успешно обновлен до использования аннотации `@Tool` из Spring AI 1.0.0-M6. Все 10 инструментов MCP переписаны и готовы к работе.
+✅ **REFACTORING COMPLETED** - Project successfully updated to use `@Tool` annotation from Spring AI 1.0.0-M6. All 10 MCP tools have been rewritten and are ready for use.
 
-✅ **ТЕСТИРОВАНИЕ ПРОЙДЕНО** - Все тесты успешно исправлены и выполняются без ошибок (7/7 passed).
+✅ **TESTING PASSED** - All tests successfully fixed and running without errors (7/7 passed).
 
-✅ **РЕФАКТОРИНГ С LOMBOK И SLF4J ЗАВЕРШЕН** - Проект полностью обновлен с современными практиками Java разработки.
+✅ **LOMBOK & SLF4J REFACTORING COMPLETED** - Project fully updated with modern Java development practices.
 
-✅ **ИСПРАВЛЕНА АВТОРИЗАЦИЯ PERPLEXITY API** - Добавлены правильные заголовки Authorization, настроена модель sonar-pro, реализована безопасность API ключей.
+✅ **PERPLEXITY API AUTHORIZATION FIXED** - Added proper Authorization headers, configured sonar-pro model, implemented API key security.
 
 - **Completed**:
     - **Task 0: Project Setup and Architecture Analysis**: Completed project refactoring, including package renaming and cleanup of demo code.
     - **Task 1 & 5: Core Service and Tool Implementation**:
-        - Implemented `PerplexityNewsClient` with error handling и расширенными методами для всех криптовалютных инструментов.
+        - Implemented `PerplexityNewsClient` with error handling and extended methods for all cryptocurrency tools.
         - ✅ **FIXED Authorization Issue**: Added Bearer token authentication, proper HTTP headers, and sonar-pro model configuration.
-        - Fully implemented all methods in `NewsAnalyticsService` with caching и правильной интеграцией с реальными доступными моделями.
+        - Fully implemented all methods in `NewsAnalyticsService` with caching and proper integration with real available models.
         - ✅ **REFACTORED `CryptoNewsTools`** to use Spring AI `@Tool` annotation instead of Function beans.
     - **Task 2: STDIO Transport**: Enabled via `application.yml`.
     - **Task 6: Configuration**: Implemented type-safe configuration properties and environment-specific profiles.
     - **Task 7: Error Handling**: Implemented a `GlobalExceptionHandler` and custom exceptions.
 
 - **Completed in Current Session**:
-    - ✅ **Исправлена авторизация Perplexity API**:
-      - Добавлен Bearer token в заголовок Authorization
-      - Настроены правильные HTTP заголовки (Accept, Content-Type)
-      - Обновлена модель с sonar-small-chat на sonar-pro
-      - API ключ вынесен в переменные окружения (.env файл)
-    - ✅ **Безопасность API ключей**:
-      - Создан .env файл с реальным API ключом
-      - Добавлен .env в .gitignore для защиты от публикации
-      - Обновлен docker-compose.yml для автоматического чтения .env
-      - Fallback значения в application.yml для demo режима
+    - ✅ **Fixed Perplexity API Authorization**:
+      - Added Bearer token to Authorization header
+      - Configured proper HTTP headers (Accept, Content-Type)
+      - Updated model from sonar-small-chat to sonar-pro
+      - Moved API key to environment variables (.env file)
+    - ✅ **API Key Security**:
+      - Created .env file with real API key
+      - Added .env to .gitignore to prevent publication
+      - Updated docker-compose.yml to automatically read .env
+      - Fallback values in application.yml for demo mode
     - ✅ **SSE Transport Integration**:
-      - Создан cursor-mcp-sse-config.json для SSE подключения
-      - Обновлена документация с тремя методами подключения (SSE, HTTP, Docker exec)
-      - Добавлены инструкции по безопасному хранению API ключей
-    - ✅ **Полный рефакторинг CryptoNewsTools** с использованием `@Tool` аннотации
-    - ✅ **Расширен PerplexityNewsClient** с методами для всех 10 инструментов
-    - ✅ **Исправлен NewsAnalyticsService** для корректной работы с реальными моделями данных
-    - ✅ **Добавлены недостающие методы в NewsItemRepository**
-    - ✅ **Исправлены все ошибки компиляции**
-    - ✅ **Проект успешно компилируется и готов к запуску**
-    - ✅ **Тесты исправлены и проходят** - обновлен NewsAnalyticsServiceTest для новой архитектуры
-    - ✅ **Рефакторинг с Lombok и SLF4J** - устранено 380+ строк бойлерплейт кода
-      - Заменены ручные логгеры на `@Slf4j` аннотации
-      - Упрощены POJO классы с `@Data`, `@Value`, `@Builder`
-      - Сохранена вся функциональность и совместимость
+      - Created cursor-mcp-sse-config.json for SSE connection
+      - Updated documentation with three connection methods (SSE, HTTP, Docker exec)
+      - Added instructions for secure API key storage
+    - ✅ **Complete CryptoNewsTools refactoring** using Spring AI `@Tool` annotation
+    - ✅ **Extended PerplexityNewsClient** with methods for all 10 tools
+    - ✅ **Fixed NewsAnalyticsService** for working with real data models
+    - ✅ **Added missing methods in NewsItemRepository**
+    - ✅ **Fixed all compilation errors**
+    - ✅ **Project successfully compiles and ready to run**
+    - ✅ **Tests fixed and passing** - updated NewsAnalyticsServiceTest for new architecture
+    - ✅ **Lombok and SLF4J refactoring** - eliminated 380+ lines of boilerplate code
+      - Replaced manual loggers with `@Slf4j` annotations
+      - Simplified POJO classes with `@Data`, `@Value`, `@Builder`
+      - Preserved all functionality and compatibility
 
 - **In Progress**:
     - **Task 3 (HTTP Transport)**: ✅ Basic endpoints available and working with proper authentication
@@ -54,20 +54,20 @@
     - **Task 8 (Testing)**: ✅ Unit tests fixed and passing (7/7). Integration and end-to-end tests are next.
     - **Task 9 (Docs & Deployment)**: ✅ `Dockerfile` and `docker-compose.yml` working. Documentation updated with SSE support.
 
-## 2. Реализованные MCP Инструменты
+## 2. Implemented MCP Tools
 
-Все 10 инструментов успешно реализованы с использованием Spring AI `@Tool` аннотации:
+All 10 tools successfully implemented using Spring AI `@Tool` annotation:
 
-1. **getLatestCryptoNews** - Получение свежих новостей по указанной криптовалюте
-2. **analyzeCryptocurrency** - Комплексный анализ настроений и трендов
-3. **getMarketSentiment** - Оценка общего настроения рынка за период
-4. **compareCryptocurrencies** - Сравнительный анализ между криптовалютами
-5. **getPositiveNews** - Фильтрация новостей по позитивной эмоциональной окраске
-6. **getNegativeNews** - Фильтрация новостей по негативной эмоциональной окраске
-7. **getTrendForecast** - Прогнозирование трендов на основе анализа новостей
-8. **searchCryptoNews** - Поиск по ключевым словам в криптопространстве
-9. **getMarketMovingEvents** - Выявление событий, влияющих на рынок
-10. **analyzeSentimentPriceCorrelation** - Анализ корреляции настроений с движением цен
+1. **getLatestCryptoNews** - Get latest news for specified cryptocurrency
+2. **analyzeCryptocurrency** - Comprehensive sentiment and trend analysis
+3. **getMarketSentiment** - Overall market sentiment assessment for a period
+4. **compareCryptocurrencies** - Comparative analysis between cryptocurrencies
+5. **getPositiveNews** - Filter news by positive emotional tone
+6. **getNegativeNews** - Filter news by negative emotional tone
+7. **getTrendForecast** - Trend forecasting based on news analysis
+8. **searchCryptoNews** - Search by keywords in crypto space
+9. **getMarketMovingEvents** - Identify market-moving events
+10. **analyzeSentimentPriceCorrelation** - Analyze sentiment-price correlation
 
 ## 3. What's Left to Build
 
@@ -83,15 +83,15 @@
     - Production security considerations
     - Monitoring and logging enhancements
 
-## 4. Технические детали рефакторинга
+## 4. Technical Refactoring Details
 
-- **Spring AI Integration**: Использует Spring AI 1.0.0-M6 с автоматическим обнаружением `@Tool` аннотированных методов
-- **MCP Protocol**: Совместим с Model Context Protocol для интеграции с Claude Desktop и другими MCP клиентами
-- **Perplexity API**: ✅ Правильная авторизация через Bearer token, модель sonar-pro
-- **Error Handling**: Все tools имеют правильную обработку ошибок с возвратом JSON-ответов
-- **Data Models**: Использует существующие модели NewsItem, CryptoAnalytics, SentimentScore
-- **Caching**: Поддерживает кэширование через Spring Cache с Caffeine
-- **Security**: API ключи защищены через .env файл, не попадают в Git
+- **Spring AI Integration**: Uses Spring AI 1.0.0-M6 with automatic discovery of `@Tool` annotated methods
+- **MCP Protocol**: Compatible with Model Context Protocol for integration with Claude Desktop and other MCP clients
+- **Perplexity API**: ✅ Proper authorization via Bearer token, sonar-pro model
+- **Error Handling**: All tools have proper error handling with JSON response returns
+- **Data Models**: Uses existing NewsItem, CryptoAnalytics, SentimentScore models
+- **Caching**: Supports caching through Spring Cache with Caffeine
+- **Security**: API keys protected through .env file, not included in Git
 
 ## 5. Transport Layer Status
 
