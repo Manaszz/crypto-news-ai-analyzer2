@@ -1,8 +1,11 @@
 {
   "mcpServers": {
-    "crypto-news-analyzer": {
-      "url": "http://localhost:8080",
-      "transport": "http",
+    "crypto-news-http": {
+      "name": "Crypto News MCP Server (HTTP)",
+      "transport": {
+        "type": "http",
+        "url": "http://localhost:8080/mcp"
+      },
       "description": "Crypto News Analysis with AI - HTTP transport"
     }
   }
