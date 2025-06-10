@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "crypto-news-analyzer": {
+      "command": "docker",
+      "args": [
+        "exec",
+        "-i",
+        "crypto-mcp-server",
+        "java",
+        "-Dspring.ai.mcp.server.transport.stdio.enabled=true",
+        "-jar",
+        "/app/crypto-mcp-server.jar"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "demo_key"
+      },
+      "description": "Crypto News Analysis with AI - Provides 10 tools for analyzing cryptocurrency news, sentiment, and trends"
+    }
+  }
+} 

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "crypto-news-sse": {
+      "name": "Crypto News MCP Server (SSE)",
+      "transport": {
+        "type": "sse",
+        "url": "http://localhost:8089/mcp/sse",
+        "timeout": 30000
+      },
+      "description": "Crypto News MCP Server с подключением через Server-Sent Events для анализа криптовалютных новостей, настроений рынка и получения данных в реальном времени"
+    }
+  }
+} 
