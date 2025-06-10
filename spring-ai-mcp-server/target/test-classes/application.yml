@@ -1,0 +1,9 @@
+spring:
+  ai:
+    openai:
+      api-key: "dummy-key-for-testing"
+perplexity:
+  api:
+    key: "dummy-key"
+    url: "http://localhost:8089"
+    model: "test-model" 

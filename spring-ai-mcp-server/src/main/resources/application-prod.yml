@@ -1,0 +1,17 @@
+# Prod-specific properties
+
+perplexity:
+  api:
+    key: ${PERPLEXITY_API_KEY} # Injected from environment
+
+# Less verbose logging for production
+logging:
+  level:
+    com.cryptonews: INFO
+    org.springframework: WARN
+
+# Hide details in health endpoint for security
+management:
+  endpoint:
+    health:
+      show-details: never 

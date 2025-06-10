@@ -1,0 +1,81 @@
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  main:
+    web-application-type: servlet
+    banner-mode: console
+  application:
+    name: crypto-mcp-server
+  profiles:
+    active: dev
+  ai:
+    mcp:
+      server:
+        name: crypto-news-mcp-server
+        version: 1.0.0
+        description: "Crypto News Analysis with AI - Provides 10 tools for analyzing cryptocurrency news, sentiment, and trends"
+        transport:
+          stdio:
+            enabled: true
+          http:
+            enabled: true
+            path: "/mcp"
+          sse:
+            enabled: true
+            path: "/mcp/sse"
+  cache:
+    cache-names:
+      - news-cache
+      - sentiment-cache
+      - analytics-cache
+      - historical-price-cache
+      - social-buzz-cache
+      - comparison-cache
+    caffeine:
+      spec: expireAfterWrite=10m
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+perplexity:
+  api:
+    key: "${PERPLEXITY_API_KEY:demo-key}"
+    url: "${PERPLEXITY_API_URL:https://api.perplexity.ai}"
+    model: "${PERPLEXITY_MODEL:llama-3-sonar-large-32k-online}"
+
+news:
+  analytics:
+    max-articles-per-request: 20
+    default-time-range-hours: 24
+
+caching:
+  caffeine:
+    spec:
+      news-cache: maximumSize=100,expireAfterWrite=10m
+      sentiment-cache: maximumSize=500,expireAfterWrite=60m
+      analytics-cache: maximumSize=200,expireAfterWrite=30m
+
+# Actuator Configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,prometheus"
+  endpoint:
+    health:
+      show-details: always
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.cryptonews.mcpserver: DEBUG
+    org.springframework.web: INFO

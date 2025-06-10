@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  crypto-mcp-server:
+    build: .
+    container_name: crypto-mcp-server
+    ports:
+      - "8080:8080"
+      - "8089:8089"
+    environment:
+      - PERPLEXITY_API_KEY=${PERPLEXITY_API_KEY:-demo_key}
+      - PERPLEXITY_API_URL=${PERPLEXITY_API_URL:-https://api.perplexity.ai}
+      - PERPLEXITY_MODEL=${PERPLEXITY_MODEL:-llama-3-sonar-large-32k-online}
+      - SPRING_PROFILES_ACTIVE=docker
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s 

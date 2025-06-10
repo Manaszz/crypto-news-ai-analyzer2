@@ -1,0 +1,5 @@
+com\cryptonews\mcpserver\CryptoMcpServerApplicationTests.class
+com\cryptonews\mcpserver\service\NewsAnalyticsServiceTest.class
+com\cryptonews\mcpserver\SseToolIntegrationTest$TestConfig.class
+com\cryptonews\mcpserver\client\PerplexityNewsClientTest.class
+com\cryptonews\mcpserver\SseToolIntegrationTest.class

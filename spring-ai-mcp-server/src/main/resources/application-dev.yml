@@ -1,0 +1,11 @@
+# Dev-specific properties
+# For local development, we can use a dummy API key
+
+perplexity:
+  api:
+    key: "dummy-dev-key"
+
+management:
+  endpoint:
+    health:
+      show-details: always 
