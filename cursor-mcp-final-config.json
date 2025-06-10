@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "taskmaster-ai": {
+      "command": "npx",
+      "args": ["-y", "--package=task-master-ai", "task-master-ai"],
+      "env": {
+        "ANTHROPIC_API_KEY": "your-anthropic-key",
+        "PERPLEXITY_API_KEY": "your-perplexity-key"
+      }
+    },
+    "crypto-news-analyzer": {
+      "command": "docker",
+      "args": [
+        "exec", "-i", "crypto-mcp-server", "java",
+        "-Dspring.ai.mcp.server.transport.stdio.enabled=true",
+        "-Dspring.profiles.active=dev",
+        "-jar", "/app/crypto-mcp-server.jar"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "your-perplexity-key"
+      },
+      "description": "Crypto News Analysis with AI - Provides 10 tools for analyzing cryptocurrency news, sentiment, and trends"
+    }
+  }
+} 
