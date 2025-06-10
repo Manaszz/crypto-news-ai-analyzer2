@@ -1,5 +1,4 @@
 # Exclude spring-ai-mcp-server directory
-spring-ai-mcp-server/
 
 # OS generated files
 .DS_Store
